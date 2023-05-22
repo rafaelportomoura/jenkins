@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  jenkins:
+    environment:
+      - JENKINS_ADMIN_ID=rafael
+      - JENKINS_ADMIN_PASSWORD=123
+    user: root
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jenkins
+    restart: always
+    ports:
+      - '8080:8080'
