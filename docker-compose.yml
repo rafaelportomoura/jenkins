@@ -9,6 +9,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      - ./jenkins:/var/lib/jenkins
     container_name: jenkins
     restart: always
     ports:
